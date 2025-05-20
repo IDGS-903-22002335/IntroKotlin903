@@ -41,6 +41,7 @@ class OperasMainActivity : AppCompatActivity() {
     }
 
     fun calcular(view: android.view.View){
+
         val num1 = edt1.text.toString().toDouble()
         val num2 = edt2.text.toString().toDouble()
         var  resultado = 0.0

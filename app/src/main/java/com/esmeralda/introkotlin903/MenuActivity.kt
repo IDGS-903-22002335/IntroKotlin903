@@ -30,6 +30,7 @@ class MenuActivity : AppCompatActivity() {
         }
     }
 
+
     private fun cine() {
         val intent = Intent(this, cineActivity::class.java)
         startActivity(intent)    }
