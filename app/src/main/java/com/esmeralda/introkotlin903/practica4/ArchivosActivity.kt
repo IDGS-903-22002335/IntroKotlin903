@@ -42,7 +42,7 @@ class ArchivosActivity : AppCompatActivity() {
                     lines.joinToString("\n")
                 }
                 outPut.text=contenido
-            }catch (e:FileNotFoundException){
+            }catch (e:FileNotFoundException){gir
                 outPut.text="Archivo no encontrado"
             }catch (e: Exception){
                 e.printStackTrace()
