@@ -7,6 +7,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.esmeralda.introkotlin903.Diccionario.DiccionarioActivity
 import com.esmeralda.introkotlin903.ejemplo.cineActivity
 import com.esmeralda.introkotlin903.practica1.saludoActivity
 import com.esmeralda.introkotlin903.practica2.OperasMainActivity
@@ -23,18 +24,25 @@ class MenuActivity : AppCompatActivity() {
         val btnCine = findViewById<Button>(R.id.btn3)
         val btnEjemplo3 = findViewById<Button>(R.id.btn4)
         val btnArchivos = findViewById<Button>(R.id.btn5)
+        val btnDiccionario = findViewById<Button>(R.id.btn6)
 
         btnSaludo.setOnClickListener { navegateToSaludo() }
         btnCalcular.setOnClickListener { operaciones() }
         btnCine.setOnClickListener { cine() }
         btnEjemplo3.setOnClickListener { ejemplo() }
         btnArchivos.setOnClickListener { archivos() }
+        btnDiccionario.setOnClickListener { Diccionari() }
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+    }
+
+    private fun Diccionari() {
+        val intent = Intent(this, DiccionarioActivity::class.java)
+        startActivity(intent)
     }
 
     private fun archivos() {
